@@ -71,14 +71,14 @@ playlist = [
 
 for music in playlist:
     try:
-        done = 'false'  # Reset done before each iteration
+        done = 'false'
         os.startfile(music)
         print("Playing:", music.split("\\")[-1])
-        animate("Listening")  # Call the animation function with the term "Listening"
+        animate("Listening")
         keyboard.wait('ctrl+*')
     except Exception as e:
         print(e)
         send_error_email(str(e))
     finally:
-        done = 'true'  # Set done to true when the animation is complete
+        done = 'true'
         keyboard.unhook_all()
