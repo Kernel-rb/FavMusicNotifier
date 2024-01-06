@@ -16,7 +16,7 @@ def send_test_email():
     message["From"] = sender_email
     message["To"] = receiver_email
 
-    text = "Ceci est un email de test pour vérifier si la configuration SMTP fonctionne."
+    text = "Just a test email."
     part1 = MIMEText(text, "plain")
     message.attach(part1)
 
@@ -24,9 +24,9 @@ def send_test_email():
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
             server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
-        print("Email de test envoyé avec succès.")
+        print("Email sent successfully.")
     except Exception as e:
-        print("Erreur lors de l'envoi de l'email de test :", e)
+        print("Error sending email: ", e)
 
 if __name__ == "__main__":
     send_test_email()
