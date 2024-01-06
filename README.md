@@ -39,7 +39,7 @@ password = your_email_password
 - The script uses the keyboard library for shortcut handling.
 
 ## Author
-[Your Name]
+[Kernel-rb]
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
